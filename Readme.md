@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Ivan](https://up.htmlacademy.ru/htmlcss/25/user/853337).
-* Наставник: `Неизвестно`.
+* Наставник: [Иван Жарков](https://up.htmlacademy.ru/htmlcss/25/user/191422).
 
 ---
 
