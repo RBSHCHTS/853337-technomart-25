@@ -11,10 +11,12 @@
     <h1 class="visually-hidden">Техномарт</h1>
     <div class="page-header__top-panel">
       <a class="page-header__logo logo">
-        <img src="img/logo-technomart.svg" style='background-color: black' alt="Логотип магазина «Техномарт»">
+        <img src="img/logo-technomart.svg" style="background-color: black" alt="Логотип магазина «Техномарт»">
       </a>
       <div class="page-header__search">
-        <span>Поиск:</span>
+        <form class="page-header__search-bar">
+          <input type="search" placeholder="Поиск:">
+        </form>
       </div>
       <a href="#" class="page-header__bookmars">Закладки:</a>
       <a href="#" class="page-header__cart">Корзина: 0</a>
@@ -30,22 +32,20 @@
         <a class="page-header__phone-number" href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a>
         <p class="page-header__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </div>
-      <div class="page-header__user-block">
-        <ul class="page-header__user-block-list">
-          <li class="login">Войти</li>
-          <li class="registration">Регистрация</li>
-        </ul>
-      </div>
+      <ul class="page-header__user-block-list">
+        <li class="page-header__user-block-login"><a href="#login">Войти</a></li>
+        <li class="page-header__user-block-registration"><a href="#registration">Регистрация</a></li>
+      </ul>
     </div>
     <nav class="main-navigation">
       <ul class="site-navigation">
-        <li><a href="main.html"></a>Главная</li>
-        <li><a href="company.html"></a>Компания</li>
-        <li><a href="catalog.html"></a>Каталог</li>
-        <li><a href="news.html"></a>Новости</li>
-        <li><a href="offers.htmls"></a>Спецпредложения</li>
-        <li><a href="delivery.html"></a>Доставка</li>
-        <li><a href="contacts"></a>Контакты</li>
+        <li><a href="main.html">Главная</a></li>
+        <li><a href="company.html">Компания</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="news.html">Новости</a></li>
+        <li><a href="offers.htmls">Спецпредложения</a></li>
+        <li><a href="delivery.html">Доставка</a></li>
+        <li><a href="contacts">Контакты</a></li>
       </ul>
     </nav>
   </header>
@@ -69,7 +69,7 @@
         <h2>контакты</h2>
         <p>Вы можете забрать товар сами,<br>заехав в наш в офис:</p>
         <a href=""><img src="img/map.jpg" alt="Карта офиса по адресу ул.Б.Конюшенная, д. 19/8"></a>
-        <a href="write-us.html" class="btn">Заблудились? Напишите нам</a>
+        <button class="btn">Заблудились? Напишите нам</button>
       </div>
     </section>
 
@@ -107,11 +107,11 @@
           Все права защищены</p>
         <div class="page-footer__social">
           <ul>
-            <li class="page-footer__social-item"><a href="https://www.vk.com">vk.com</a>
+            <li class="page-footer__social-item"><a href="https://www.vk.com" aria-label="Наш Вконтакте"></a>
             </li>
-            <li class="page-footer__social-item"><a href="https://www.facebook.com">facebook.com</a>
+            <li class="page-footer__social-item"><a href="https://www.facebook.com" aria-label='Наш Фейсбук'></a>
             </li>
-            <li class="page-footer__social-item"><a href="https://www.instagram.com">instagram.com</a>
+            <li class="page-footer__social-item"><a href="https://www.instagram.com" aria-label="Наш Инстаграм"></a>
             </li>
           </ul>
 
@@ -128,13 +128,30 @@
     </div>
   </footer>
 
-  <section class="modal modal-login">
-    <h2 class="visually-hidden">Модальное окно</h2>
-    <span>Ваше имя:</span>
-    <span>Ваш e-mail:</span>
-    <span>Текст письма:</span>
-    <a href="#" class="btn">отправить</a>
-    <!-- Форма для write-us -->
+  <section class="modal-cart">
+    <h2 class="visually-hidden">Добавлено в корзину</h2>
+    <span class='modal-cart__icon'></span>
+    <i class="modal-cart__text">Товар добавлен в корзину!</i>
+    <a class='btn' href="#ordering">Оформить заказ</a>
+    <a class='modal-cart__btn' href="catalog.html">Продолжить покупки</a>
+    <button class='modal-cart__close-btn' aria-label="Закрыть"></button>
+  </section>
+
+  <section class="modal-write-us">
+    <h2 class="visually-hidden">Напиши нам</h2>
+    <form action="#" method="POST">
+      <label>Ваше имя:
+        <input type="text" name='name' placeholder="Имя Фамилия">
+      </label>
+      <label>Ваш e-mail:
+        <input type="email" name='email' placeholder="email@example.com">
+      </label>
+      <label for="comment-field">Текст письма:</label>
+      <textarea id="comment-field" name="comment-field" placeholder="В свободной форме"></textarea>
+      <div class="modal-write-us__block-btn">
+        <button class="btn" type="submit">Отправить</button>
+      </div>
+    </form>
   </section>
 
 </body>
