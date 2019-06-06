@@ -4,50 +4,59 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic"
+    rel="stylesheet">
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
   <header class="page-header">
     <h1 class="visually-hidden">Техномарт</h1>
     <div class="page-header__top-panel">
-      <a class="page-header__logo logo">
-        <img src="img/logo-technomart.svg" style="background-color: black" alt="Логотип магазина «Техномарт»">
-      </a>
+      <div class="page-header__logo-wrapper logo">
+        <a class="page-header__logo">
+          <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип магазина «Техномарт»">
+        </a>
+      </div>
       <div class="page-header__search">
-        <form class="page-header__search-bar">
-          <input type="search" placeholder="Поиск:">
+        <form>
+          <input class="page-header__search-bar" id='search-field' type="search" aria-label="Поиск"
+            placeholder="Поиск:">
         </form>
       </div>
       <a href="#" class="page-header__bookmars">Закладки:</a>
       <a href="#" class="page-header__cart">Корзина: 0</a>
       <a href="#" class="page-header__ordering">Оформить заказ</a>
     </div>
-    <div class="page-header__content">
-      <p class="page-header__title">
-        Интернет-магазин
-        строительных материалов
-        и инструментов для ремонта
-      </p>
-      <div class="page-header__contacts">
-        <a class="page-header__phone-number" href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a>
-        <p class="page-header__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+    <div class="page-header__wrapper-bg">
+      <div class="page-header__content">
+        <p class="page-header__title">
+          Интернет-магазин
+          строительных материалов
+          и инструментов для ремонта
+        </p>
+        <div class="page-header__contacts">
+          <a class="page-header__phone-number" href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a>
+          <p class="page-header__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </div>
+        <ul class="page-header__user-block-list">
+          <li><a class="page-header__user-block-login" href="#login">Войти</a></li>
+          <li><a class="page-header__user-block-registration" href="#registration">Регистрация</a></li>
+        </ul>
       </div>
-      <ul class="page-header__user-block-list">
-        <li class="page-header__user-block-login"><a href="#login">Войти</a></li>
-        <li class="page-header__user-block-registration"><a href="#registration">Регистрация</a></li>
-      </ul>
+      <nav class="main-navigation">
+        <ul class="site-navigation">
+          <li><a href="main.html">Главная</a></li>
+          <li><a href="company.html">Компания</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="offers.htmls">Спецпредложения</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="contacts">Контакты</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="main-navigation">
-      <ul class="site-navigation">
-        <li><a href="main.html">Главная</a></li>
-        <li><a href="company.html">Компания</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="news.html">Новости</a></li>
-        <li><a href="offers.htmls">Спецпредложения</a></li>
-        <li><a href="delivery.html">Доставка</a></li>
-        <li><a href="contacts">Контакты</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
@@ -69,18 +78,19 @@
         <h2>контакты</h2>
         <p>Вы можете забрать товар сами,<br>заехав в наш в офис:</p>
         <a href=""><img src="img/map.jpg" alt="Карта офиса по адресу ул.Б.Конюшенная, д. 19/8"></a>
-        <button class="btn">Заблудились? Напишите нам</button>
+        <a class="btn">Заблудились? Напишите нам</a>
       </div>
     </section>
 
   </main>
 
   <footer class="page-footer">
-    <div class="pgae-footer__container">
-
+    <div class="page-footer__container">
       <div class="page-footer__top">
-        <a href="#"><img class="page-footer__logo logo" src="img/logo-technomart.svg"
-            alt="Логотип интернет-магазина «Техномарт»"></a>
+        <div class="page-footer__logo-wrapper logo">
+          <a class="page-footer__logo" href="#"><img src="img/logo-technomart.svg" width="109" height="19"
+              alt="Логотип интернет-магазина «Техномарт»"></a>
+        </div>
         <p class="page-footer__contacts">
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
           +7 (812) 555-05-55
@@ -134,7 +144,7 @@
     <i class="modal-cart__text">Товар добавлен в корзину!</i>
     <a class='btn' href="#ordering">Оформить заказ</a>
     <a class='modal-cart__btn' href="catalog.html">Продолжить покупки</a>
-    <button class='modal-cart__close-btn' aria-label="Закрыть"></button>
+    <button class='modal-cart__close-btn' type='button' aria-label="Закрыть"></button>
   </section>
 
   <section class="modal-write-us">
@@ -146,8 +156,8 @@
       <label>Ваш e-mail:
         <input type="email" name='email' placeholder="email@example.com">
       </label>
-      <label for="comment-field">Текст письма:</label>
-      <textarea id="comment-field" name="comment-field" placeholder="В свободной форме"></textarea>
+      <label for="comment-field">Текст письма:
+      <textarea id="comment-field" name="comment-field" placeholder="В свободной форме"></textarea> </label>
       <div class="modal-write-us__block-btn">
         <button class="btn" type="submit">Отправить</button>
       </div>

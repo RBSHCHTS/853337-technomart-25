@@ -4,65 +4,74 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Техномарт</title>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic"
+    rel="stylesheet">
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
   <header class="page-header">
     <h1 class="visually-hidden">Техномарт</h1>
     <div class="page-header__top-panel">
-      <a class="page-header__logo logo" aria-label="На главную Техномарта">
-        <img src="img/logo-technomart.svg" alt="Логотип магазина «Техномарт»">
-      </a>
+      <div class="page-header__logo-wrapper logo">
+        <a class="page-header__logo" aria-label="На главную Техномарта">
+          <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип магазина «Техномарт»">
+        </a>
+      </div>
       <div class="page-header__search">
         <form>
-          <input class="page-header__search-bar" type="search" placeholder="Поиск:">
+          <input class="page-header__search-bar" type="search" placeholder="Поиск:" aria-label="Поиск">
         </form>
       </div>
       <a href="#" class="page-header__bookmars">Закладки:</a>
       <a href="#" class="page-header__cart cart--full">Корзина: 10</a>
       <a href="#" class="page-header__ordering">Оформить заказ</a>
     </div>
-    <div class="page-header__content">
-      <p class="page-header__title">
-        Интернет-магазин
-        строительных материалов
-        и инструментов для ремонта
-      </p>
-      <div class="page-header__contacts">
-        <a class="page-header__phone-number" href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a>
-        <p class="page-header__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+    <div class="page-header__wrapper-bg">
+      <div class="page-header__content">
+        <p class="page-header__title">
+          Интернет-магазин
+          строительных материалов
+          и инструментов для ремонта
+        </p>
+        <div class="page-header__contacts">
+          <a class="page-header__phone-number" href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a>
+          <p class="page-header__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </div>
+        <ul class="page-header__user-block-list">
+          <li><a class="page-header__user-block-profile" href="#">Равшан Джамшутович</a></li>
+          <li>
+            <a class="page-header__user-block-logout" href="#logout">Выход(картинка)</a>
+          </li>
+          <li class="page-header__user-block-orders"><a href="#">Мои заказы</a></li>
+          <li class="page-header__user-block-cabinet"><a href="#">Личный кабинет</a></li>
+        </ul>
       </div>
-      <ul class="page-header__user-block">
-        <li class="page-header__user-block-profile"><a href="#">Равшан Джамшутович</a></li>
-        <li class="page-header__user-block-logout">
-          <a href="#logout">Выход(картинка)</a>
-        </li>
-        <li><a href="#" class="page-header__user-block-orders">Мои заказы</a></li>
-        <li><a href="#" class="page-header__user-block-cabinet">Личный кабинет</a></li>
-      </ul>
+      <nav class="main-navigation">
+        <ul class="site-navigation">
+          <li><a href="main.html">Главная</a></li>
+          <li><a href="company.html">Компания</a></li>
+          <li class="site-navigation-current"><a href="catalog.html">Каталог</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="offers.htmls">Спецпредложения</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="contacts">Контакты</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="main-navigation">
-      <ul class="site-navigation">
-        <li><a href="main.html">Главная</a></li>
-        <li><a href="company.html">Компания</a></li>
-        <li class="site-navigation-current"><a href="catalog.html">Каталог</a></li>
-        <li><a href="news.html">Новости</a></li>
-        <li><a href="offers.htmls">Спецпредложения</a></li>
-        <li><a href="delivery.html">Доставка</a></li>
-        <li><a href="contacts">Контакты</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
     <ul class="breadcrumbs">
-      <li class="breadcrumbs__item"><a href="index.html" aria-label="На главную Техномарта">Главная (картинка
-          домика)</a></li>
+      <li class="breadcrumbs__item"><a href="index.html" aria-label="На главную Техномарта"></a></li>
       <li class="breadcrumbs__item"><a href="catalog.html">Каталог</a></li>
       <li class="breadcrumbs__item"><a href="tools.html">Инструмент</a></li>
       <li class="breadcrumbs__item breadcrumbs__item--current">Перфораторы</li>
     </ul>
-    <h1 class="page-title">перфораторы</h1>
+    <div class="catalog-header">
+      <h1 class="catalog-header__page-title">перфораторы</h1>
+    </div>
 
     <section class="filters">
       <form action="#" method="get">
@@ -75,27 +84,27 @@
             <!-- Регулятор цены -->
           </div>
           <div class="price-range">
-            <input type="number" class="price-min">
+            <input type="number" class="price-min" aria-label='Нижняя цена'>
             <span>—</span>
-            <input type="number" class="price-max">
+            <input type="number" class="price-max" aria-label='Максимальная цена'>
           </div>
 
         </div>
         <div class="filters__brands">
           <h3>Производители:</h3>
           <ul class="filters__brands-list">
-            <li>BOSCH</li>
-            <li>ИНТЕРСКОЛ</li>
-            <li>MAKIta</li>
-            <li>Dewalt</li>
-            <li>Hitachi</li>
+            <li><input type="checkbox" name='brand' value='BOSCH' checked><label >BOSCH</label></li>
+            <li><input type="checkbox" name='brand' value='ИНТЕРСКОЛ'><label >ИНТЕРСКОЛ</label></li>
+            <li><input type="checkbox" name='brand' value='ИНТЕРСКОЛ' checked><label >MAKIta</label></li>
+            <li><input type="checkbox" name='brand' value='Dewalt'><label>Dewalt</label></li>
+            <li><input type="checkbox" name='brand' value='Hitachi'><label >Hitachi</label></li>
           </ul>
         </div>
         <div class="filters__powertype">
           <h3>Питание:</h3>
           <ul class="filters__powertype-list">
-            <li>Аккумуляторные</li>
-            <li>Сетевые</li>
+            <li><input type="radio" name='powertype' value='Аккумуляторные'><label >Аккумуляторные</label></li>
+            <li><input type="radio" name='powertype' value='Сетевые'><label >Сетевые</label></li>
           </ul>
           <button class="filters__btn" type='button'>показать</button>
         </div>
@@ -106,8 +115,8 @@
       <ul class="catalog__products-list">
         <li class="catalog__products-item">
           <div class="catalog__products-actions">
-            <a href="#to-buy" class="to-buy"></a>
-            <a href="#to-bookmark" class="to-bookmark"></a>
+            <a href="#to-buy" class="to-buy">Купить</a>
+            <a href="#to-bookmark" class="to-bookmark">В закладки</a>
           </div>
           <div class="catalog__products-image"><img src="img/bosch3000.jpg" alt="Перфоратор BOSCH BFG 3000"></div>
           <a href="#BFG3000">
@@ -120,8 +129,8 @@
 
         <li class="catalog__products-item">
           <div class="catalog__products-actions">
-            <a href="#to-buy" class="to-buy"></a>
-            <a href="#to-bookmark" class="to-bookmark"></a>
+            <a href="#to-buy" class="to-buy">Купить</a>
+            <a href="#to-bookmark" class="to-bookmark">В закладки</a>
           </div>
           <div class="catalog__products-image"><img src="img/bosch6000.jpg" alt="Перфоратор BOSCH BFG 6000"></div>
           <a href="#BFG6000">
@@ -134,8 +143,8 @@
 
         <li class="catalog__products-item catalog__products-item--new">
           <div class="catalog__products-actions">
-            <a href="#to-buy" class="to-buy"></a>
-            <a href="#to-bookmark" class="to-bookmark"></a>
+            <a href="#to-buy" class="to-buy">Купить</a>
+            <a href="#to-bookmark" class="to-bookmark">В закладки</a>
           </div>
           <div class="catalog__products-image"><img src="img/bosch2000.jpg" alt="Перфоратор BOSCH BFG 2000"></div>
           <a href="#BFG2000">
@@ -147,8 +156,8 @@
 
         <li class="catalog__products-item">
           <div class="catalog__products-actions">
-            <a href="#to-buy" class="to-buy"></a>
-            <a href="#to-bookmark" class="to-bookmark"></a>
+            <a href="#to-buy" class="to-buy">Купить</a>
+            <a href="#to-bookmark" class="to-bookmark">В закладки</a>
           </div>
           <div class="catalog__products-image"><img src="img/bosch3000.jpg" alt="Перфоратор BOSCH BFG 3000"></div>
           <a href="#BFG3000">
@@ -161,8 +170,8 @@
 
         <li class="catalog__products-item">
           <div class="catalog__products-actions">
-            <a href="#to-buy" class="to-buy"></a>
-            <a href="#to-bookmark" class="to-bookmark"></a>
+            <a href="#to-buy" class="to-buy">Купить</a>
+            <a href="#to-bookmark" class="to-bookmark">В закладки</a>
           </div>
           <div class="catalog__products-image"><img src="img/bosch6000.jpg" alt="Перфоратор BOSCH BFG 6000"></div>
           <a href="#BFG6000">
@@ -175,8 +184,8 @@
 
         <li class="catalog__products-item">
           <div class="catalog__products-actions">
-            <a href="#to-buy" class="to-buy"></a>
-            <a href="#to-bookmark" class="to-bookmark"></a>
+            <a href="#to-buy" class="to-buy">Купить</a>
+            <a href="#to-bookmark" class="to-bookmark">В закладки</a>
           </div>
           <div class="catalog__products-image"><img src="img/bosch2000.jpg" alt="Перфоратор BOSCH BFG 2000"></div>
           <a href="#BFG2000">
@@ -188,8 +197,8 @@
 
         <li class="catalog__products-item catalog__products-item--new">
           <div class="catalog__products-actions">
-            <a href="#to-buy" class="to-buy"></a>
-            <a href="#to-bookmark" class="to-bookmark"></a>
+            <a href="#to-buy" class="to-buy">Купить</a>
+            <a href="#to-bookmark" class="to-bookmark">В закладки</a>
           </div>
           <div class="catalog__products-image"><img src="img/bosch3000.jpg" alt="Перфоратор BOSCH BFG 3000"></div>
           <a href="#BFG3000">
@@ -202,8 +211,8 @@
 
         <li class="catalog__products-item">
           <div class="catalog__products-actions">
-            <a href="#to-buy" class="to-buy"></a>
-            <a href="#to-bookmark" class="to-bookmark"></a>
+            <a href="#to-buy" class="to-buy">Купить</a>
+            <a href="#to-bookmark" class="to-bookmark">В закладки</a>
           </div>
           <div class="catalog__products-image"><img src="img/bosch6000.jpg" alt="Перфоратор BOSCH BFG 6000"></div>
           <a href="BFG6000">
@@ -216,8 +225,8 @@
 
         <li class="catalog__products-item catalog__products-item--new">
           <div class="catalog__products-actions">
-            <a href="#to-buy" class="to-buy"></a>
-            <a href="#to-bookmark" class="to-bookmark"></a>
+            <a href="#to-buy" class="to-buy">Купить</a>
+            <a href="#to-bookmark" class="to-bookmark">В закладки</a>
           </div>
           <div class="catalog__products-image"><img src="img/bosch2000.jpg" alt="Перфоратор BOSCH BFG 2000"></div>
           <a href="#BFG2000">
@@ -243,8 +252,10 @@
 
   <footer class='page-footer'>
     <div class="page-footer__top">
-      <a href="#"><img class="page-footer__logo logo" src="img/logo-technomart.svg"
-          alt="Логотип интернет-магазина «Техномарт»"></a>
+      <div class="page-footer__logo-wrapper logo">
+        <a href="#"><img class="page-footer__logo" src="img/logo-technomart.svg" width="109" height="19"
+            alt="Логотип интернет-магазина «Техномарт»"></a>
+      </div>
       <p class="page-footer__contacts">
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
         +7 (812) 555-05-55
@@ -267,7 +278,7 @@
     </div>
 
     <div class="page-footer__bottom">
-      <p>© 2010–2019 Компания «Техномарт»<br>
+      <p class='copyright'>© 2010–2019 Компания «Техномарт»<br>
         Все права защищены</p>
       <div class="page-footer__social">
         <ul>
@@ -280,14 +291,16 @@
         </ul>
 
       </div>
-      <p>
-        <b>Обратная связь:</b>
-        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </p>
-      <p>
-        <b>Разработано —</b>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-      </p>
+      <div class="feedback-wrapper">
+        <p>
+          <b>Обратная связь:</b>
+          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </p>
+        <p>
+          <b>Разработано —</b>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+        </p>
+      </div>
     </div>
   </footer>
   <section class="modal-cart">
@@ -296,7 +309,7 @@
     <i class="modal-cart__text">Товар добавлен в корзину!</i>
     <a class='btn' href="#ordering">Оформить заказ</a>
     <a class='modal-cart__btn' href="catalog.html">Продолжить покупки</a>
-    <button class='modal-cart__close-btn' aria-label="Закрыть"></button>
+    <button class='modal-cart__close-btn' type='button' aria-label="Закрыть"></button>
   </section>
 
 
